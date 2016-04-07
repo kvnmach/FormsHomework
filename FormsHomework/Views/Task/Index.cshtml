@@ -1,7 +1,17 @@
-﻿
+﻿@model System.Collections.Generic.List<FormsHomework.Models.Task>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <h1>Tasks</h1>
+</div>
+
+<div class="row ">
+    @foreach (var i in Model)
+    {
+        <li>@i.Name, @i.Information, @i.IsDone</li>
+    }
+
+</div>
 
