@@ -17,7 +17,7 @@ namespace FormsHomework.Controllers
                 new Task(1, "Kevin Mach", "Hello", true),
                 new Task(2, "Kevin Mach", "World", false),
             };
-            return View();
+            return View(task);
         }
 
         public ActionResult About()
