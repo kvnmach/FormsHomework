@@ -12,9 +12,9 @@ namespace FormsHomework.Controllers
         // GET: Task
         public ActionResult Index()
         {
-            List<Task> tasks;
-            tasks = (List<Task>) Session["tasks"] ?? new List<Task>();
-            return View(tasks);
+            List<Task> presentTasks;
+            presentTasks = (List<Task>) Session["tasks"] ?? new List<Task>();
+            return View(presentTasks);
         }
 
         [HttpGet]
@@ -26,7 +26,24 @@ namespace FormsHomework.Controllers
         [HttpPost]
         public ActionResult Create(Task newTask)
         {
-            
+            if (ModelState.IsValid)
+            {
+                var presentTasks = (List<Task>) Session["tasks"];
+                if (presentTasks == null)
+                {
+                    presentTasks = new List<Task>();
+                }
+
+                presentTasks.Add(newTask);
+
+                Session["tasks"] = presentTasks;
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
