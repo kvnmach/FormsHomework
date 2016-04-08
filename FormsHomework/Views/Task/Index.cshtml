@@ -1,6 +1,6 @@
 ﻿@model System.Collections.Generic.List<FormsHomework.Models.Task>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "title";
 }
 
 <div class="jumbotron">
@@ -10,7 +10,7 @@
 <div class="row ">
     @foreach (var i in Model)
     {
-        <li>@i.Name, @i.Information, @i.IsDone</li>
+        <li> @i.Name, @i.Information, @i.IsDone</li>
     }
 
 </div>

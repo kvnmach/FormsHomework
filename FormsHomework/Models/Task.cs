@@ -12,13 +12,20 @@ namespace FormsHomework.Models
         public bool IsDone { get; set; }
         public string Information { get; set; }
 
-    public Task(int id, string name, string info, bool isDone)
+
+        public Task()
+        {
+
+        }
+
+        public Task(int id, string name, string info, bool isDone)
         {
             Id = id;
             Name = name;
             Information = info;
             IsDone = isDone;
         }
+
 
     }
 }
