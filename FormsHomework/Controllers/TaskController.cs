@@ -11,7 +11,7 @@ namespace FormsHomework.Controllers
     {
         // GET: Task
         public ActionResult Index()
-        {
+        {  //?? was in if statement quick action made it readable...
             List<Task> presentTasks;
             presentTasks = (List<Task>) Session["tasks"] ?? new List<Task>();
             return View(presentTasks);

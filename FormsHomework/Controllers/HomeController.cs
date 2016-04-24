@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace FormsHomework.Controllers
 {
     public class HomeController : Controller
-    {
+    {   [HttpGet]
         public ActionResult Index()
 
         {
@@ -26,6 +26,8 @@ namespace FormsHomework.Controllers
 
             return View();
         }
+
+       
 
         public ActionResult Contact()
         {
