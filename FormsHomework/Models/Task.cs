@@ -10,10 +10,10 @@ namespace FormsHomework.Models
     {
         public int Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        public bool IsDone { get; set; }
-        [Required]
-        public string Information { get; set; }
+        public  string Name { get; set; }
+        public   bool IsDone { get; set; }
+     
+        public  string Information { get; set; }
 
 
         public Task()
@@ -21,11 +21,11 @@ namespace FormsHomework.Models
 
         }
 
-        public Task( string name, string info, bool isDone)
+        public Task(  string name, string information, bool isDone)
         {
             
             Name = name;
-            Information = info;
+            Information = information;
             IsDone = isDone;
         }
 

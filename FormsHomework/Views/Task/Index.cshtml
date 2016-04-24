@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<FormsHomework.Models.Task>
+﻿@model List<FormsHomework.Models.Task>
 @{
     ViewBag.Title = "title";
 }
@@ -7,12 +7,13 @@
     <h1>Tasks</h1>
 </div>
 
-<div class="row ">
+<ul>
     @foreach (var i in Model)
     {
-        <li>Name : @i.Name, Description: @i.Information, Complete: @i.IsDone</li>
+        <span><h2>Name : @i.Name </h2>
+        <br /> Description: @i.Information   <br/> Complete: @i.IsDone</span>
     }
     <br />
     @Html.ActionLink("Add Task", "Create")
-</div>
-
+    
+</ul>
