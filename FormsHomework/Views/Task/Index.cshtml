@@ -10,9 +10,9 @@
 <div class="row ">
     @foreach (var i in Model)
     {
-        <li> @i.Name, @i.Information, @i.IsDone</li>
+        <li>Name : @i.Name, Description: @i.Information, Complete: @i.IsDone</li>
     }
-    <br/>
+    <br />
     @Html.ActionLink("Add Task", "Create")
 </div>
 
