@@ -9,7 +9,9 @@ namespace FormsHomework.Controllers
 {
     public class TaskController : Controller
     {
+        public List<Task> Tasks { get; set;  } = new List<Task>();
         // GET: Task
+        [HttpGet]
         public ActionResult Index()
         {  //?? was in if statement quick action made it readable...
             List<Task> presentTasks;
