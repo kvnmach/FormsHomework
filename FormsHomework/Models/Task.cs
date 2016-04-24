@@ -12,6 +12,7 @@ namespace FormsHomework.Models
         [Required]
         public string Name { get; set; }
         public bool IsDone { get; set; }
+        [Required]
         public string Information { get; set; }
 
 
